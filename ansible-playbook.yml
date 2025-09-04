@@ -1,0 +1,16 @@
+---
+- name: Run Netflix Clone
+  hosts: app_servers
+  become: yes
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+        update_cache: yes
+        
+    - name: Pull App Image
+      shell: docker pull mohamed010/netflix-clone
+
+    - name: Run App Container
+      shell: docker run -d -p 80:80 --name myclone mohamed010/netflix-clone
