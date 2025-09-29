@@ -56,6 +56,9 @@ Before you start, make sure you have:
 ## 🚀 How to run the repository
 
 - Add **AWS access key** and **AWS secret key** to jenkins credentials.
+
+<img src="Images/aws credentials.png">
+  
 - Edit ansible playbook to your repository in **Docker hub**.
 - login your host machine to your **Docker hub** profile.
 - Create a job in **Jenkins**.
